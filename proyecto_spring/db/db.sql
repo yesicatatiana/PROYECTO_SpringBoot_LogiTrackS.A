@@ -5,7 +5,7 @@ USE logitrack;
 
 CREATE TABLE rol (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nombre enum('administrador','empleado')
+    nombre enum('ADMINITRADOR','EMPLEADO')
 );
 
 
@@ -51,7 +51,7 @@ CREATE TABLE producto (
 
 CREATE TABLE inventario (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    stock INT NOT NULL DEFAULT 0,
+    stock INT NOT NULL,
     bodega_id BIGINT NOT NULL,
     producto_id BIGINT NOT NULL,
     FOREIGN KEY (bodega_id) REFERENCES bodega(id),
@@ -62,7 +62,7 @@ CREATE TABLE movimientos (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     tipo ENUM('ENTRADA','SALIDA','TRANSFERENCIA') NOT NULL,
     fecha DATETIME NOT NULL,
-    estado ENUM('PENDIENTE','COMPLETADO','ANULADO') NOT NULL DEFAULT 'COMPLETADO',
+    estado ENUM('PENDIENTE','COMPLETADO','ANULADO') NOT NULL,
     usuario_id BIGINT NOT NULL,
     bodega_origen_id  BIGINT,
     bodega_destino_id BIGINT,
@@ -84,7 +84,7 @@ CREATE TABLE detalle_movimiento (
 
 CREATE TABLE auditoria (
     id BIGINT AUTO_INCREMENT PRIMARY KEY, 
-    operacion ENUM('INSERT','UPDATE','DELETE') NOT NULL,
+    operacion ENUM('INSERTAR','ACTUALIZAR','ELIMINAR') NOT NULL,
     entidad VARCHAR(60) NOT NULL,
     valores_anteriores TEXT NOT NULL,  
     valores_nuevos TEXT NOT NULL,
