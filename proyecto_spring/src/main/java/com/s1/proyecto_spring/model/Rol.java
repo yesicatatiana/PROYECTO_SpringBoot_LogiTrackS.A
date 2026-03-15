@@ -16,9 +16,9 @@ public class Rol {
 
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "ENUM('ADMINISTRADOR','EMPLEADO')")
-    private Rol rol;
+    private TipoRol rol;
 
-    public enum rol {
-        administrador, empleado
+    public enum TipoRol {
+        ADMINISTRADOR, EMPLEADO
     }
 }

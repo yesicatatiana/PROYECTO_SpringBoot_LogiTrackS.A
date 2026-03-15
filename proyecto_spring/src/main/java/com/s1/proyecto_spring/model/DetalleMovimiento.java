@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 
-public class Detalle_movimiento {
+public class DetalleMovimiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,7 +22,7 @@ public class Detalle_movimiento {
     private Integer cantidad;
 
     @Column(nullable = false)
-    private BigDecimal precio_unitario;
+    private BigDecimal precioUnitario;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "movimiento_id", nullable = false)

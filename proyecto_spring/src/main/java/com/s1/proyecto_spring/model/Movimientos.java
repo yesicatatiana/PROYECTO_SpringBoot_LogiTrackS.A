@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "movimientos")
@@ -20,15 +21,15 @@ public class Movimientos {
 
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "ENUM('ENTRADA','SALIDA','TRANSFERENCIA')")
-    private Movimientos tipo;
+    private TipoMovimiento tipo;
 
     @Column(nullable = false)
-    private LocalDate fecha;
+    private LocalDateTime fecha;
 
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, columnDefinition = "ENUM('PENDIENTE','COMPLETADO','ANULADO')")
-    private Movimientos estado;
+    private EstadoMovimiento estado;
 
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -21,8 +21,8 @@ public class Auditoria {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(columnDefinition = "ENUM('INSERTAR','ACTUALIZAR','ELIMINAR'")
-    private auditoria operacion;
+    @Column(columnDefinition = "ENUM('INSERTAR','ACTUALIZAR','ELIMINAR')")
+    private TipoOperacion operacion;
 
     @Column(nullable = false)
     private String entidad;
@@ -42,4 +42,8 @@ public class Auditoria {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
+
+    public enum TipoOperacion {
+        INSERTAR, ACTUALIZAR,ELIMINAR
+    }
 }
