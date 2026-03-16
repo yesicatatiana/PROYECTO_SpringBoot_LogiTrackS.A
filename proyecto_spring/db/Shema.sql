@@ -38,7 +38,7 @@ CREATE TABLE producto (
     descripcion VARCHAR(200),
     precio DECIMAL(12, 2) NOT NULL,
     stock INT NOT NULL,
-    categoria VARCHAR(150),
+    categoria VARCHAR(150)
 );
 
 

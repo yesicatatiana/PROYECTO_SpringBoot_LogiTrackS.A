@@ -6,7 +6,9 @@ import com.s1.proyecto_spring.dto.response.ProductoResponseDTO;
 import com.s1.proyecto_spring.model.DetalleMovimiento;
 import com.s1.proyecto_spring.model.Movimientos;
 import com.s1.proyecto_spring.model.Producto;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DetalleMovimientoMapper {
 
     public DetalleMovimientoResponseDTO entidadADTO(DetalleMovimiento detalle, ProductoResponseDTO productoDTO) {

@@ -5,7 +5,9 @@ import com.s1.proyecto_spring.dto.response.BodegaResponseDTO;
 import com.s1.proyecto_spring.dto.response.UsuarioResponseDTO;
 import com.s1.proyecto_spring.model.Bodega;
 import com.s1.proyecto_spring.model.Usuario;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BodegaMapper {
     public BodegaResponseDTO entidadADTO(Bodega bodega, UsuarioResponseDTO encargadoDTO) {
         if (bodega == null || encargadoDTO == null) return null;

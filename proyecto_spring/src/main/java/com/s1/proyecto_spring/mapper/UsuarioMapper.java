@@ -5,7 +5,9 @@ import com.s1.proyecto_spring.dto.response.RolResponseDTO;
 import com.s1.proyecto_spring.dto.response.UsuarioResponseDTO;
 import com.s1.proyecto_spring.model.Rol;
 import com.s1.proyecto_spring.model.Usuario;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UsuarioMapper {
     public UsuarioResponseDTO entidadADTO(Usuario usuario, RolResponseDTO rolDTO) {
         if (usuario == null || rolDTO == null) return null;

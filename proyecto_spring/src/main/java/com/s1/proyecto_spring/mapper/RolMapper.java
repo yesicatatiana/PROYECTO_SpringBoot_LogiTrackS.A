@@ -2,7 +2,9 @@ package com.s1.proyecto_spring.mapper;
 
 import com.s1.proyecto_spring.dto.response.RolResponseDTO;
 import com.s1.proyecto_spring.model.Rol;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RolMapper {
 
     public RolResponseDTO entidadADTO(Rol rol) {

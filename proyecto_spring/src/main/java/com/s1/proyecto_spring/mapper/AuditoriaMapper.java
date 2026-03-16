@@ -5,7 +5,9 @@ import com.s1.proyecto_spring.dto.response.AuditoriaResponseDTO;
 import com.s1.proyecto_spring.dto.response.UsuarioResponseDTO;
 import com.s1.proyecto_spring.model.Auditoria;
 import com.s1.proyecto_spring.model.Usuario;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AuditoriaMapper {
 
     public AuditoriaResponseDTO entidadADTO(Auditoria auditoria, UsuarioResponseDTO usuarioDTO) {

@@ -8,9 +8,11 @@ import com.s1.proyecto_spring.dto.response.UsuarioResponseDTO;
 import com.s1.proyecto_spring.model.Bodega;
 import com.s1.proyecto_spring.model.Movimientos;
 import com.s1.proyecto_spring.model.Usuario;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class MovimientosMapper {
     public MovimientosResponseDTO entidadADTO(Movimientos movimientos, UsuarioResponseDTO usuarioDTO,
                                               BodegaResponseDTO bodegaOrigenDTO, BodegaResponseDTO bodegaDestinoDTO,
