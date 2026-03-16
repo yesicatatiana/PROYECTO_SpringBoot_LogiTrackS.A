@@ -7,7 +7,6 @@ import lombok.*;
 @Table(name = "bodega")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-@Builder
 public class Bodega {
 
     @Id
