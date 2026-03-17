@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class AuditoriaMapper {
 
     public AuditoriaResponseDTO entidadADTO(Auditoria auditoria, UsuarioResponseDTO usuarioDTO) {
-        if (auditoria == null || usuarioDTO == null) return null;
+        if (auditoria == null) return null;
         return new AuditoriaResponseDTO(
                 auditoria.getId(),
                 auditoria.getOperacion().name(),
@@ -38,7 +38,7 @@ public class AuditoriaMapper {
     }
 
     public void actualizarEntidadDesdeDTO(Auditoria auditoria, AuditoriaRequestDTO dto, Usuario usuario) {
-        if (auditoria == null || dto == null) return;
+        if (auditoria == null || dto == null) return ;
         auditoria.setOperacion(dto.operacion());
         auditoria.setEntidad(dto.entidad());
         auditoria.setValoresAnteriores(dto.valoresAnteriores());

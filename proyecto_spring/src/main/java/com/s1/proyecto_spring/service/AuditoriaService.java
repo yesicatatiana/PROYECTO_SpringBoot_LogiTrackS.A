@@ -3,7 +3,7 @@ package com.s1.proyecto_spring.service;
 import com.s1.proyecto_spring.dto.request.AuditoriaRequestDTO;
 import com.s1.proyecto_spring.dto.response.AuditoriaResponseDTO;
 import com.s1.proyecto_spring.model.Auditoria;
-import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 
